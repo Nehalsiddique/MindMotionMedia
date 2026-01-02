@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=IBM+Plex+Sans:wght@300;400;500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0a0a0a;
+  color: white;
+  font-family: 'IBM Plex Sans', sans-serif;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar { width: 0; height: 0; }
+html { scrollbar-width: none; }
+
+#webgl {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+}
+
+/* Glass */
+.glass {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.15);
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 80px);
+  padding: 16px 24px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 20;
+}
+
+.nav-right { display: flex; gap: 16px; }
+
+/* Buttons */
+.glass-btn {
+  padding: 10px 20px;
+  border-radius: 14px;
+  color: white;
+  text-decoration: none;
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(255,255,255,0.15);
+}
+
+.glass-btn.primary {
+  background: rgba(255,255,255,0.35);
+}
+
+/* Sections */
+.section {
+  padding: 180px 10vw;
+  max-width: 1400px;
+  margin: auto;
+}
+
+.hero { padding-top: 260px; }
+
+h1, h2 {
+  font-family: 'Playfair Display', serif;
+}
+
+h1 {
+  font-size: clamp(56px, 6vw, 104px);
+  line-height: 1.05;
+}
+
+h2 {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+p {
+  max-width: 760px;
+  opacity: 0.78;
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+/* Divider */
+.divider {
+  text-align: center;
+  font-size: 14px;
+  letter-spacing: 1px;
+  opacity: 0.4;
+  padding: 120px 0;
+}
+
+/* CONTACT CENTER FIX */
+.contact {
+  text-align: center;
+}
+
+.contact p,
+.contact .closing-line {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.closing-line {
+  margin-top: 40px;
+  font-size: 14px;
+  opacity: 0.5;
+}
